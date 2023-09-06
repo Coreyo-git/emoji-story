@@ -1,0 +1,43 @@
+.main-analysis {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff; /* Set text color to white to contrast with the dark background */
+}
+
+.analysis-container {
+	max-width: 75%;
+	margin: 0 auto;
+	padding: 20px;
+	color: #fff; /* Set text color to white to contrast with the dark background */
+  }
+
+  .section {
+	margin-bottom: 30px;
+	background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to sections */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+  
+  h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  p {
+	font-size: 16px;
+	line-height: 1.5;
+  }
+  
+  /* Styling for Main Characters and Central Themes lists */
+  .section ul {
+	list-style-type: disc;
+	margin-left: 20px;
+  }
+  
+  /* Styling for Conclusion section */
+  .section:last-child {
+	border-top: 2px solid #fff;
+	padding-top: 30px;
+  }

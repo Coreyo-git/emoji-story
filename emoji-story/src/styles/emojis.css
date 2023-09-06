@@ -1,0 +1,40 @@
+span {
+	vertical-align: middle;
+	display:inline-block;
+	border-radius: 14px;
+	text-align:center;
+	cursor: pointer;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+span:hover {
+	color:white !important;
+	background-color: #2980b9 !important;
+	box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.4);
+	transform: scale(1.2);
+}
+
+.spinner-container {
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ButtonStyles.css */
+.reshuffle-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.reshuffle-button:hover {
+    background-color: #ff4f4f;
+    transform: scale(1.05);
+}
+
+.reshuffle-button:active {
+    background-color: #ff3333;
+}

@@ -1,0 +1,15 @@
+span {
+	vertical-align: middle;
+	display:inline-block;
+	border-radius: 14px;
+	text-align:center;
+	box-shadow: 0px 0px 3px 3px rgb(0,0,0);
+	cursor: pointer;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+span:hover {
+	color:white !important;
+	background-color: #2980b9 !important;
+	box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.4);
+	transform: scale(1.2);
+}

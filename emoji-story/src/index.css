@@ -1,0 +1,8 @@
+body {
+	width: 100vw !important;
+	height: 100vh !important;
+	min-height: 100vh !important;
+	background: linear-gradient(to bottom, #29323c, #131e22);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}

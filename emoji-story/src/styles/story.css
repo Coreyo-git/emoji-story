@@ -1,0 +1,61 @@
+.main-story {
+	text-align:center;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction:column;
+	width:80%;
+	margin:0 auto;
+	color:white;
+}
+
+.story-body > p {
+	font-size: 20px;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+	width:100%;
+}
+.analysis-button {
+	padding: 14px 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 30%; 
+    margin-top: 30px;
+}
+
+.analysis-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.analysis-button:active {
+    background-color: #1f67a5;
+}
+
+.restart-button {
+    margin-top: 30px;
+    padding: 14px 18px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	width: 30%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.restart-button:hover {
+    background-color: #ff4f4f;
+    transform: scale(1.05);
+}
+
+.restart-button:active {
+    background-color: #ff3333;
+}
