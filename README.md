@@ -42,7 +42,7 @@ Emoji-story and the redis deployment utilizes both the API and the self hosted v
 
 1. Clone the repository to your local machine:
 
-2. Set up the OpenAI API integration by obtaining an API key from the OpenAI website. Update the configuration files with your API key.
+2. Set up the OpenAI API integration by obtaining an API key from the OpenAI website. Update the configuration files(compose.yaml) with your API key.
 
 3. Use Docker Compose to build and run the application components. Detailed instructions can be found in the project's `docker-compose.yml` file.
 
