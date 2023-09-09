@@ -15,6 +15,8 @@ Emoji-Story is a creative and innovative AI-based short story generator that uti
 ## Context
 
 I created Emoji-Story as a short, fun and educational project while exploring AWS (Amazon Web Services) Cloud. The project combines technology and creativity, showcasing an accessible interaction using AI and cloud computing.
+Heres an overview of the emoji-story networks and services
+![Emoji-story-network-diagram](./emoji-story-network-diagram.png)
 
 ## Technologies Used
 
