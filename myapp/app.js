@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
 const redis = require("redis");
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('./docs/swagger.json');
 
 const emojisRouter = require("./routes/emojis");
 const storyRouter = require("./routes/story");
@@ -81,6 +83,7 @@ app.use("/emojis", emojisRouter);
 app.use("/story", storyRouter);
 app.use("/analysis", analysisRouter);
 app.use("/visitors", visitorsRouter);
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

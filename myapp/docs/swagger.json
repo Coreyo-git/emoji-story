@@ -1,0 +1,867 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Your API Documentation",
+        "version": "1.0.0",
+        "description": "Documentation for your Node.js API"
+    },
+    "paths": {
+        "/visitors": {
+            "get": {
+                "summary": "Get visitor count from dynamoDB",
+                "description": "This endpoint increments and returns the current visitor count. Note that this also creates the table if it doesn't exist",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "count": 100
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "An error occurred while processing the request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/emojis": {
+            "get": {
+                "summary": "Get random emojis name and html code",
+                "description": "This endpoint returns a list of random emojis.",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": [
+									{
+									  "name": "radio",
+									  "data": "&#128251;"
+									},
+									{
+									  "name": "tear-off calendar",
+									  "data": "&#128198;"
+									},
+									{
+									  "name": "hammer",
+									  "data": "&#128296;"
+									},
+									{
+									  "name": "pencil",
+									  "data": "&#9999;"
+									},
+									{
+									  "name": "public address loudspeaker ≊ loudspeaker",
+									  "data": "&#128226;"
+									},
+									{
+									  "name": "dvd",
+									  "data": "&#128192;"
+									},
+									{
+									  "name": "movie camera",
+									  "data": "&#127909;"
+									},
+									{
+									  "name": "moyai ≊ moai",
+									  "data": "&#128511;"
+									},
+									{
+									  "name": "floppy disk",
+									  "data": "&#128190;"
+									},
+									{
+									  "name": "heavy dollar sign",
+									  "data": "&#128178;"
+									},
+									{
+									  "name": "pistol",
+									  "data": "&#128299;"
+									},
+									{
+									  "name": "gear",
+									  "data": "&#9881;"
+									},
+									{
+									  "name": "black scissors ≊ scissors",
+									  "data": "&#9986;"
+									},
+									{
+									  "name": "telephone receiver",
+									  "data": "&#128222;"
+									},
+									{
+									  "name": "ledger",
+									  "data": "&#128210;"
+									},
+									{
+									  "name": "black telephone ≊ telephone",
+									  "data": "&#9742;"
+									},
+									{
+									  "name": "wrench",
+									  "data": "&#128295;"
+									},
+									{
+									  "name": "drum with drumsticks ≊ drum",
+									  "data": "&#129345;"
+									},
+									{
+									  "name": "spiral calendar pad ≊ spiral calendar",
+									  "data": "&#128467;"
+									},
+									{
+									  "name": "round pushpin",
+									  "data": "&#128205;"
+									},
+									{
+									  "name": "chains",
+									  "data": "&#9939;"
+									},
+									{
+									  "name": "money bag",
+									  "data": "&#128176;"
+									},
+									{
+									  "name": "banknote with euro sign ≊ euro banknote",
+									  "data": "&#128182;"
+									},
+									{
+									  "name": "fax machine",
+									  "data": "&#128224;"
+									},
+									{
+									  "name": "open book",
+									  "data": "&#128214;"
+									},
+									{
+									  "name": "crystal ball",
+									  "data": "&#128302;"
+									},
+									{
+									  "name": "blue book",
+									  "data": "&#128216;"
+									},
+									{
+									  "name": "film projector",
+									  "data": "&#128253;"
+									},
+									{
+									  "name": "newspaper",
+									  "data": "&#128240;"
+									},
+									{
+									  "name": "money with wings",
+									  "data": "&#128184;"
+									},
+									{
+									  "name": "speaker with one sound wave ≊ speaker on",
+									  "data": "&#128265;"
+									},
+									{
+									  "name": "lower left ballpoint pen ≊ pen",
+									  "data": "&#128394;"
+									},
+									{
+									  "name": "calendar",
+									  "data": "&#128197;"
+									},
+									{
+									  "name": "optical disc",
+									  "data": "&#128191;"
+									},
+									{
+									  "name": "linked paperclips",
+									  "data": "&#128391;"
+									},
+									{
+									  "name": "incoming envelope",
+									  "data": "&#128232;"
+									},
+									{
+									  "name": "chart with downwards trend ≊ chart decreasing",
+									  "data": "&#128201;"
+									},
+									{
+									  "name": "syringe",
+									  "data": "&#128137;"
+									},
+									{
+									  "name": "personal computer ≊ laptop computer",
+									  "data": "&#128187;"
+									},
+									{
+									  "name": "violin",
+									  "data": "&#127931;"
+									},
+									{
+									  "name": "card index dividers",
+									  "data": "&#128450;"
+									},
+									{
+									  "name": "package",
+									  "data": "&#128230;"
+									},
+									{
+									  "name": "scales ≊ balance scale",
+									  "data": "&#9878;"
+									},
+									{
+									  "name": "satellite antenna",
+									  "data": "&#128225;"
+									},
+									{
+									  "name": "desktop computer",
+									  "data": "&#128421;"
+									},
+									{
+									  "name": "camera with flash",
+									  "data": "&#128248;"
+									},
+									{
+									  "name": "electric plug",
+									  "data": "&#128268;"
+									},
+									{
+									  "name": "coffin",
+									  "data": "&#9904;"
+									},
+									{
+									  "name": "crossed swords",
+									  "data": "&#9876;"
+									},
+									{
+									  "name": "videocassette",
+									  "data": "&#128252;"
+									},
+									{
+									  "name": "oil drum",
+									  "data": "&#128738;"
+									},
+									{
+									  "name": "card file box",
+									  "data": "&#128451;"
+									},
+									{
+									  "name": "rolled-up newspaper",
+									  "data": "&#128478;"
+									},
+									{
+									  "name": "closed book",
+									  "data": "&#128213;"
+									},
+									{
+									  "name": "closed mailbox with lowered flag",
+									  "data": "&#128234;"
+									},
+									{
+									  "name": "pager",
+									  "data": "&#128223;"
+									},
+									{
+									  "name": "bar chart",
+									  "data": "&#128202;"
+									},
+									{
+									  "name": "memo",
+									  "data": "&#128221;"
+									},
+									{
+									  "name": "candle",
+									  "data": "&#128367;"
+									},
+									{
+									  "name": "briefcase",
+									  "data": "&#128188;"
+									},
+									{
+									  "name": "page with curl",
+									  "data": "&#128195;"
+									},
+									{
+									  "name": "microphone",
+									  "data": "&#127908;"
+									},
+									{
+									  "name": "smoking symbol ≊ smoking",
+									  "data": "&#128684;"
+									},
+									{
+									  "name": "open mailbox with lowered flag",
+									  "data": "&#128237;"
+									},
+									{
+									  "name": "pill",
+									  "data": "&#128138;"
+									},
+									{
+									  "name": "headphone",
+									  "data": "&#127911;"
+									},
+									{
+									  "name": "lock with ink pen ≊ lock with pen",
+									  "data": "&#128271;"
+									},
+									{
+									  "name": "lower left fountain pen ≊ fountain pen",
+									  "data": "&#128395;"
+									},
+									{
+									  "name": "right-pointing magnifying glass",
+									  "data": "&#128270;"
+									},
+									{
+									  "name": "card index",
+									  "data": "&#128199;"
+									},
+									{
+									  "name": "left-pointing magnifying glass",
+									  "data": "&#128269;"
+									},
+									{
+									  "name": "mobile phone with rightwards arrow at left ≊ mobile phone with arrow",
+									  "data": "&#128242;"
+									},
+									{
+									  "name": "film frames",
+									  "data": "&#127902;"
+									},
+									{
+									  "name": "battery",
+									  "data": "&#128267;"
+									},
+									{
+									  "name": "control knobs",
+									  "data": "&#127899;"
+									},
+									{
+									  "name": "hammer and pick",
+									  "data": "&#9874;"
+									},
+									{
+									  "name": "television",
+									  "data": "&#128250;"
+									},
+									{
+									  "name": "books",
+									  "data": "&#128218;"
+									},
+									{
+									  "name": "banknote with pound sign ≊ pound banknote",
+									  "data": "&#128183;"
+									},
+									{
+									  "name": "trackball",
+									  "data": "&#128434;"
+									},
+									{
+									  "name": "electric light bulb ≊ light bulb",
+									  "data": "&#128161;"
+									},
+									{
+									  "name": "bookmark",
+									  "data": "&#128278;"
+									},
+									{
+									  "name": "scroll",
+									  "data": "&#128220;"
+									},
+									{
+									  "name": "shopping trolley ≊ shopping cart",
+									  "data": "&#128722;"
+									},
+									{
+									  "name": "izakaya lantern ≊ red paper lantern",
+									  "data": "&#127982;"
+									},
+									{
+									  "name": "page facing up",
+									  "data": "&#128196;"
+									},
+									{
+									  "name": "guitar",
+									  "data": "&#127928;"
+									},
+									{
+									  "name": "minidisc",
+									  "data": "&#128189;"
+									},
+									{
+									  "name": "file cabinet",
+									  "data": "&#128452;"
+									},
+									{
+									  "name": "label",
+									  "data": "&#127991;"
+									},
+									{
+									  "name": "notebook",
+									  "data": "&#128211;"
+									},
+									{
+									  "name": "cheering megaphone ≊ megaphone",
+									  "data": "&#128227;"
+									},
+									{
+									  "name": "green book",
+									  "data": "&#128215;"
+									},
+									{
+									  "name": "postbox",
+									  "data": "&#128238;"
+									},
+									{
+									  "name": "electric torch ≊ flashlight",
+									  "data": "&#128294;"
+									},
+									{
+									  "name": "bell",
+									  "data": "&#128276;"
+									},
+									{
+									  "name": "saxophone",
+									  "data": "&#127927;"
+									},
+									{
+									  "name": "compression",
+									  "data": "&#128476;"
+									},
+									{
+									  "name": "envelope with downwards arrow above ≊ envelope with arrow",
+									  "data": "&#128233;"
+									},
+									{
+									  "name": "bookmark tabs",
+									  "data": "&#128209;"
+									},
+									{
+									  "name": "outbox tray",
+									  "data": "&#128228;"
+									},
+									{
+									  "name": "clipboard",
+									  "data": "&#128203;"
+									},
+									{
+									  "name": "funeral urn",
+									  "data": "&#9905;"
+									},
+									{
+									  "name": "dagger knife ≊ dagger",
+									  "data": "&#128481;"
+									},
+									{
+									  "name": "pick",
+									  "data": "&#9935;"
+									},
+									{
+									  "name": "three button mouse ≊ computer mouse",
+									  "data": "&#128433;"
+									},
+									{
+									  "name": "open lock",
+									  "data": "&#128275;"
+									},
+									{
+									  "name": "trumpet",
+									  "data": "&#127930;"
+									},
+									{
+									  "name": "notebook with decorative cover",
+									  "data": "&#128212;"
+									},
+									{
+									  "name": "link symbol ≊ link",
+									  "data": "&#128279;"
+									},
+									{
+									  "name": "clapper board",
+									  "data": "&#127916;"
+									},
+									{
+									  "name": "open mailbox with raised flag",
+									  "data": "&#128236;"
+									},
+									{
+									  "name": "camera",
+									  "data": "&#128247;"
+									},
+									{
+									  "name": "mobile phone",
+									  "data": "&#128241;"
+									},
+									{
+									  "name": "lock",
+									  "data": "&#128274;"
+									},
+									{
+									  "name": "open file folder",
+									  "data": "&#128194;"
+									},
+									{
+									  "name": "bow and arrow",
+									  "data": "&#127993;"
+									},
+									{
+									  "name": "straight ruler",
+									  "data": "&#128207;"
+									},
+									{
+									  "name": "spiral note pad ≊ spiral notepad",
+									  "data": "&#128466;"
+									},
+									{
+									  "name": "closed lock with key",
+									  "data": "&#128272;"
+									},
+									{
+									  "name": "ballot box with ballot",
+									  "data": "&#128499;"
+									},
+									{
+									  "name": "lower left crayon ≊ crayon",
+									  "data": "&#128397;"
+									},
+									{
+									  "name": "musical note",
+									  "data": "&#127925;"
+									},
+									{
+									  "name": "closed mailbox with raised flag",
+									  "data": "&#128235;"
+									},
+									{
+									  "name": "studio microphone",
+									  "data": "&#127897;"
+									},
+									{
+									  "name": "lower left paintbrush ≊ paintbrush",
+									  "data": "&#128396;"
+									},
+									{
+									  "name": "keyboard",
+									  "data": "&#9000;"
+									},
+									{
+									  "name": "banknote with yen sign ≊ yen banknote",
+									  "data": "&#128180;"
+									},
+									{
+									  "name": "alembic",
+									  "data": "&#9879;"
+									},
+									{
+									  "name": "level slider",
+									  "data": "&#127898;"
+									},
+									{
+									  "name": "speaker with cancellation stroke ≊ speaker off",
+									  "data": "&#128263;"
+									},
+									{
+									  "name": "e-mail symbol ≊ e-mail",
+									  "data": "&#128231;"
+									},
+									{
+									  "name": "wastebasket",
+									  "data": "&#128465;"
+									},
+									{
+									  "name": "musical keyboard",
+									  "data": "&#127929;"
+									},
+									{
+									  "name": "chart with upwards trend and yen sign ≊ chart increasing with yen",
+									  "data": "&#128185;"
+									},
+									{
+									  "name": "pushpin",
+									  "data": "&#128204;"
+									},
+									{
+									  "name": "inbox tray",
+									  "data": "&#128229;"
+									},
+									{
+									  "name": "printer",
+									  "data": "&#128424;"
+									},
+									{
+									  "name": "speaker with three sound waves ≊ speaker loud",
+									  "data": "&#128266;"
+									},
+									{
+									  "name": "musical score",
+									  "data": "&#127932;"
+									},
+									{
+									  "name": "microscope",
+									  "data": "&#128300;"
+									},
+									{
+									  "name": "nut and bolt",
+									  "data": "&#128297;"
+									},
+									{
+									  "name": "postal horn",
+									  "data": "&#128239;"
+									},
+									{
+									  "name": "shield",
+									  "data": "&#128737;"
+									},
+									{
+									  "name": "credit card",
+									  "data": "&#128179;"
+									},
+									{
+									  "name": "envelope",
+									  "data": "&#9993;"
+									},
+									{
+									  "name": "key",
+									  "data": "&#128273;"
+									},
+									{
+									  "name": "hammer and wrench",
+									  "data": "&#128736;"
+									},
+									{
+									  "name": "file folder",
+									  "data": "&#128193;"
+									},
+									{
+									  "name": "multiple musical notes ≊ musical notes",
+									  "data": "&#127926;"
+									},
+									{
+									  "name": "chart with upwards trend ≊ chart increasing",
+									  "data": "&#128200;"
+									},
+									{
+									  "name": "old key",
+									  "data": "&#128477;"
+									},
+									{
+									  "name": "currency exchange",
+									  "data": "&#128177;"
+									},
+									{
+									  "name": "video camera",
+									  "data": "&#128249;"
+									},
+									{
+									  "name": "banknote with dollar sign ≊ dollar banknote",
+									  "data": "&#128181;"
+									},
+									{
+									  "name": "triangular ruler",
+									  "data": "&#128208;"
+									},
+									{
+									  "name": "telescope",
+									  "data": "&#128301;"
+									},
+									{
+									  "name": "paperclip",
+									  "data": "&#128206;"
+									},
+									{
+									  "name": "orange book",
+									  "data": "&#128217;"
+									},
+									{
+									  "name": "black nib",
+									  "data": "&#10002;"
+									},
+									{
+									  "name": "bell with cancellation stroke ≊ bell with slash",
+									  "data": "&#128277;"
+									},
+									{
+									  "name": "speaker",
+									  "data": "&#128264;"
+									}
+								  ]
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "An error occurred while processing the request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/story": {
+            "get": {
+                "summary": "Generate a story based on a prompt",
+                "description": "This endpoint generates a story based on a provided prompt.",
+                "parameters": [
+                    {
+                        "name": "prompt",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The prompt used to generate the story."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "title": "The Goalkeeper's Test",
+                                    "story": "In a small town, there was a young aspiring goalkeeper named Alex. He had always dreamed of becoming the best goalkeeper in the world, but he knew that he had to overcome numerous challenges and obstacles to achieve his goal. Every day, Alex would wake up early and head to the local football field. He would spend hours practicing his skills, diving to make incredible saves and perfecting his technique. The other players in the town would often challenge him, trying to score goals past him. But Alex was determined to prove himself. He faced each challenge with determination and perseverance. As time went on, Alex's skills improved, and he started catching the attention of scouts from professional football clubs. He was invited to try out for a prestigious academy known for producing top goalkeepers. The tryouts were intense, with talented young players from all over the country competing for a spot. But Alex didn't let the pressure get to him. He focused on his training and gave his all during the tryouts. Finally, the day of the final selection arrived. Alex's heart raced as the coach announced the names of the chosen players. And there it was - his name was called! Alex had made it! He had overcome the challenges and obstacles that stood in his way. From that moment on, his journey as a professional goalkeeper began, filled with even more challenges and obstacles. But Alex was ready. He knew that with hard work, dedication, and belief in himself, he could conquer anything that came his way. And one day, he would become the best goalkeeper in the world."
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "Missing 'prompt' parameter"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "An error occurred while processing the request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/analysis": {
+            "post": {
+                "summary": "Analyze a story and return analysis in JSON",
+                "description": "This endpoint allows you to submit a story and get an analysis of the story content in JSON format.",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "story": {
+                                        "type": "string",
+                                        "description": "The story content to be analyzed."
+                                    }
+                                },
+                                "example": {
+                                    "story": "Once upon a time..."
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful analysis response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "Introduction": {
+                                        "Title": "The Goalkeeper's Test",
+                                        "PlotOverview": "In a small town, there was a young aspiring goalkeeper named Alex. He had always dreamed of becoming the best goalkeeper in the world, but he knew that he had to overcome numerous challenges and obstacles to achieve his goal."
+                                    },
+                                    "Summary": {
+                                        "MainEvents": "Alex spends hours practicing his skills, facing challenges from other players in the town. He catches the attention of scouts and is invited to try out for a prestigious academy. Alex gives his all during the tryouts and is chosen to be a part of the academy.",
+                                        "TurningPoints": "The turning point in the story is when Alex is invited to try out for the prestigious academy and when his name is called during the final selection."
+                                    },
+                                    "Characters": {
+                                        "MainCharacters": ["Alex"]
+                                    },
+                                    "Themes": {
+                                        "CentralThemes": [
+                                            "Perseverance",
+                                            "Dedication",
+                                            "Belief in oneself"
+                                        ]
+                                    },
+                                    "Setting": {
+                                        "Time": "Present day",
+                                        "Place": "A small town and a prestigious academy"
+                                    },
+                                    "Symbolism": {
+                                        "Symbols": []
+                                    },
+                                    "Conflict": {
+                                        "MainConflicts": [
+                                            "Alex's goal of becoming the best goalkeeper in the world and the challenges and obstacles he faces along the way"
+                                        ]
+                                    },
+                                    "Style": {
+                                        "WritingStyle": "Descriptive and motivational",
+                                        "ImpactOnReader": "The writing style creates a sense of determination and inspires the reader to believe in their own dreams and abilities."
+                                    },
+                                    "Mood": {
+                                        "MoodDescription": "Motivational and uplifting"
+                                    },
+                                    "Impact": {
+                                        "EmotionalResponse": "The story evokes feelings of hope, determination, and excitement.",
+                                        "MessageInterpretation": "The story teaches us that with hard work, dedication, and belief in ourselves, we can overcome challenges and achieve our goals."
+                                    },
+                                    "KeyWord": {
+                                        "MostCommonWord": "goalkeeper"
+                                    },
+                                    "Conclusion": {
+                                        "Summary": "Alex overcomes challenges and obstacles to achieve his dream of becoming a professional goalkeeper.",
+                                        "PersonalInterpretation": "The story emphasizes the importance of perseverance and believing in oneself in order to achieve success."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "Missing 'story' parameter"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "error": "An error occurred while processing the request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

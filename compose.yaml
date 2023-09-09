@@ -49,7 +49,7 @@ services:
             context: ./emoji-story
             dockerfile: Dockerfile
         ports:
-            - "80:80"
+            - "3001:80"
         networks:
             private_network:
                 ipv4_address: 172.28.0.2
