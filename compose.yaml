@@ -4,6 +4,7 @@ services:
         build:
             context: ./emojihub
             dockerfile: Dockerfile
+        image: coreyo96/emoji-story:emojihub
         expose:
             - 4000
         networks:
@@ -12,7 +13,7 @@ services:
 
     # Redis-cache service
     redis-cache:
-        image: "redis:latest"
+        image: redis:latest
         restart: always
         expose:
             - 6379
@@ -27,6 +28,7 @@ services:
         build:
             context: ./myapp
             dockerfile: Dockerfile
+        image: coreyo96/emoji-story:myapp
         networks:
             private_network:
                 ipv4_address: 172.28.0.3
@@ -48,6 +50,7 @@ services:
         build:
             context: ./emoji-story
             dockerfile: Dockerfile
+        image: coreyo96/emoji-story:emoji-story
         ports:
             - "3001:80"
         networks:
@@ -55,8 +58,6 @@ services:
                 ipv4_address: 172.28.0.2
         depends_on:
             - myapp
-        volumes:
-            - ./nginx.conf:/etc/nginx/conf.d/default.conf
         environment:
             - REACT_APP_API_ENDPOINT=172.28.0.3:3000
 
